@@ -10,18 +10,22 @@
 <body>
 <script>
   /*
-    オブジェクト
-      - 名前
-      - 値
+    組み込みオブジェクト： あらかじめjsが用意しているオブジェクト
+      - String: 文字列
+      - Array: 配列
+      - Math: 数学
+      - Date: 日付
   */
-  var user = {
-    email: "aoki@mail.com",
-    score: 100,
-    greet: function(name) { // オブジェクトのプロパティの値に関数が来た場合は、メソッドと呼ぶ
-      console.log("hello " + name + " from " + this.email); // メソッド内でthisを使うと今いるオブジェクトを参照することができる
-    }
-  };
-  user.greet("aoki");
+  var s = new String("aoki");
+  console.log(s.length); // length: 文字数
+  console.log(s.replace("a", "A")); // replace: 置換
+  console.log(s.substr(1, 3)); // substr: 部分文字列を返す
+
+  var ss = "ryota"; // 文字列リテラル: jsの方で文字列オブジェクトを使いたいんだなと判別してくれる
+  console.log(ss.length);
+  console.log(ss.replace("a", "A"));
+  console.log(ss.substr(1, 3));
+
 </script>
 <div id="container">
   <header>
