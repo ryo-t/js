@@ -10,32 +10,25 @@
 <body>
 <script>
   /*
-    真偽値
-      - 文字列: 空文字以外ならtrue
-      - 数値: 0 or NaN以外ならtrue
-      - true / false
-      - object: null以外ならtrue
-      - undefined,null: false
+    条件分岐式
+      - switch
   */
-  if (x) {
-    // 処理
+  var signal = "blue";
+  switch(signal) {
+    case "red":
+      console.log("stop!");
+      break;
+    case "green":
+    case "blue":
+      console.log("go!");
+      break;
+    case "yellow":
+      console.log("slow down!");
+      break;
+    default:
+      console.log("wrong signal");
+      break;
   }
-  if (x !== '') {
-    // 処理
-  }
-  /*
-    三項演算子
-      var a, b, c;
-      if (条件) {
-        a = b;
-      } else {
-        a = c;
-      }
-      もしくは...
-      a = (条件) ? b : c;
-  */
-  var max, x, y;
-  max = (x > y) ? x : y;
 </script>
 <div id="container">
   <header>
