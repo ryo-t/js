@@ -10,28 +10,10 @@
 <body>
 <script>
   /*
-    組み込みオブジェクト： あらかじめjsが用意しているオブジェクト
-      - Math: 数学
-        - ceil: 実数を渡すと切り上げる
-        - floor: 実数を渡すと切り捨てる
-        - round: 実数を渡すと四捨五入
-        - random: ランダムで抽出
-      - Date: 日付
-        - getFullYear: 年を取得
-        - getMonth: 月を取得
-        - getTime: 1970/1/1からの経過時間を取得
   */
-  console.log(Math.PI);
-  console.log(Math.ceil(5.3));
-  console.log(Math.floor(5.3));
-  console.log(Math.round(5.3));
-  console.log(Math.random());
-
-  var d = new Date();
-  var d = new Date(2014, 1, 11, 10, 20, 30); // jsは0から始まるので要注意
-  console.log(d.getFullYear());
-  console.log(d.getMonth());
-  console.log(d.getTime());
+  // console.dir(window); // dir: オブジェクトのプロパティを表示
+  console.log(window.outerHeight);
+  window.location.href = 'http://google.com'
 </script>
 <div id="container">
   <header>
