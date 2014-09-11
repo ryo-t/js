@@ -15,13 +15,13 @@
       - 値
   */
   var user = {
-    email: "aoki@mail.com", //email -> プロパティ名, "aoki@mail.com" -> プロパティ
-    score: 100 // プロパティには;をつけないこと。複数入れるときは,を入れていく。
+    email: "aoki@mail.com",
+    score: 100,
+    greet: function(name) { // オブジェクトのプロパティの値に関数が来た場合は、メソッドと呼ぶ
+      console.log("hello " + name + " from " + this.email); // メソッド内でthisを使うと今いるオブジェクトを参照することができる
+    }
   };
-  console.log(user["email"]);
-  console.log(user.email);
-  user.score = 200;
-  console.log(user.score);
+  user.greet("aoki");
 </script>
 <div id="container">
   <header>
