@@ -10,26 +10,18 @@
 <body>
 <script>
   /*
-    関数：複数の処理を行う
+    即時関数：関数(function)全体を()で囲い、最後に();を付けることで直ぐに実行する
 
-    function 関数名() {
-      処理
-      return 返り値
-    }
   */
-  function hello(name) {
-    var msg = "hello " + name; // ローカル変数
-    return msg;
-  }
-  var greet = hello("jojo");
-  console.log(greet);
-
-  var yahoo = function (name) { // 無名関数、匿名関数
-    var msg = "hello " + name;
-    return msg;
-  }; // ←var宣言してる為、式になっているから;を忘れないこと
-  var greet = yahoo("dio");
-  console.log(greet);
+  (function(name) { // 直ぐに実行される為、関数名は省略可能
+    console.log("hello " + name);
+  })("aoki");
+  
+  (function() {
+    var x = 10; // ローカル変数扱いになる
+        y = 20;
+    console.log(x + y);
+  })();
 
 </script>
 <div id="container">
