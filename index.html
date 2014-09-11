@@ -11,19 +11,18 @@
 <script>
   /*
     ループ処理
-    white
-    do ... while
+    for
+
+    break: ループ処理を抜ける
+    continue: ループ処理を1回スキップ
   */
-  var i = 0;
-  while (i < 10) { // 先にwhileがある為、条件に合致しなかった場合は処理すらしない
+  for (var i = 0; i < 10; i++) {
+    if (i == 5) {
+      // break;
+      continue;
+    }
     console.log(i);
-    i++;
   }
-  var ii = 0;
-  do {
-    console.log(ii);
-    ii++;
-  } while (ii < 10); // あとにwhileがある為、条件に合致しなかった場合は何もせずに表示
 </script>
 <div id="container">
   <header>
