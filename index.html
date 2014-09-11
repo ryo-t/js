@@ -10,18 +10,40 @@
 <body>
 <script>
   /*
-    即時関数：関数(function)全体を()で囲い、最後に();を付けることで直ぐに実行する
-
+    タイマー処理
+      - setInterval: 一定時間ごとに処理を繰り返す(処理が完了したか判別しないので、ブラウザクラッシュする可能性あり)
+      - setTimeout: 一定時間ごとに処理を一回だけ行う(一般的にはこっちの方が処理判別できるから使われるらしい)
   */
-  (function(name) { // 直ぐに実行される為、関数名は省略可能
-    console.log("hello " + name);
-  })("aoki");
-  
-  (function() {
-    var x = 10; // ローカル変数扱いになる
-        y = 20;
-    console.log(x + y);
-  })();
+  // ▼▼setIntervalの処理▼▼
+  // var i = 0;
+  // function show() {
+  //   console.log(i++);
+  // }
+  // setInterval(function() {
+  //   show();
+  // }, 1000);
+
+  // ▼▼setTimeoutの処理▼▼
+  // var ii = 0;
+  // function onlyShow() {
+  //   console.log(ii++);
+  // }
+  // setTimeout(function() {
+  //   onlyShow();
+  // }, 1000);
+
+  // ▼▼setTimeoutでsetIntervalの様に繰り返す処理▼▼
+  var i = 0;
+  function show() {
+    console.log(i++);
+    var timerId = setTimeout(function() { // setTimeoutに変数名をつける
+      show();
+    }, 1000);
+    if (i > 3) {
+      clearTimeout(timerId); // 条件分岐式で一定の値に来た時にタイマーを止める(clearTimeout)
+    }
+  }
+  show();
 
 </script>
 <div id="container">
