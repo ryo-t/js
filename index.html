@@ -10,18 +10,25 @@
 <body>
 <script>
   /*
-    alert: 
-    confirm: 
-    prompt: 
+    関数：複数の処理を行う
+
+    function 関数名() {
+      処理
+      return 返り値
+    }
   */
-  // alert("hello");
-  // var answer = confirm("are you sure?");
-  // console.log(answer);
-  // if (confirm("本当に削除しますか？")) {
-  //   // 削除処理
-  // }
-  var name = prompt("お名前は?", "hoge"); // 第二引数を指定することでフォーム内の文字列を設定できる
-  console.log(name);
+  function hello(name) {
+    console.log("hello " + name);
+  }
+  hello("aoki");
+  hello("ryota");
+
+  function helloo(name) {
+    return "hello " + name;
+  }
+  var greet = helloo("jojo");
+  console.log(greet);
+
 </script>
 <div id="container">
   <header>
