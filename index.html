@@ -6,14 +6,18 @@
   <title>js練習</title>
   <link rel="stylesheet" href="">
   <script src="test.js"></script>
+  <style>
+    .myStyle {
+      font-weight: bold;
+      border: 1px solid gray;
+    }
+  </style>
 </head>
 <body>
 <script>
   /*
+    - DOM
   */
-  // console.dir(window); // dir: オブジェクトのプロパティを表示
-  console.log(window.outerHeight);
-  window.location.href = 'http://google.com'
 </script>
 <div id="container">
   <header>
@@ -49,8 +53,21 @@
           <li>テキストエディタ</li>
         </ul>
       </section>
+      <section>
+        <p id="msg">こんいちは！</p>
+      </section>
     </article>
   </main>
 </div>
+<script>
+  var e = document.getElementById('msg');
+  e.textContent = 'hello!'; // textを書き換える
+  e.style.color = 'red';
+  e.className = 'myStyle';
+
+  var greet = document.createElement('p');
+      text = document.createTextNode('hello world');
+  document.body.appendChild(greet).appendChild(text);
+  </script>
 </body>
 </html>
