@@ -10,22 +10,33 @@
 <body>
 <script>
   /*
-    文字列
-      - 表現方法
-      - 特殊文字
-    演算子
-  */
-  var s;
-  s = "hello";
-  s = 'hello';
-  s = 'fuckin\''; // バックスラッシュ+シングルクォーテーションで文字列として扱う
-  s = "one\ntwo"; // バックスラッシュ+nで改行
-  s = "I\tam"; // バックスラッシュ+tでタブ
-  s = 'it\'s\n a pe\tn.';
+    条件分岐式
+      - if(条件) {
+        真
+      } else {
+        偽
+      }
 
-  s = 'hello' + 'world';
-  s = '5' + 5; // 文字列と数値が混ざると数値=文字列と判別してしまう為、10ではなく55という文字列となる
-  console.log(s);
+    比較演算子
+      - > , <
+      - >= . <=
+      - === ==
+      - !== !=
+
+    論理演算子
+      - and : &&
+      - or : ||
+      - not : !
+      ex). score > 60 && score < 80
+  */
+  var score = 80;
+  if (score > 60) {
+    console.log('ok!');
+  } else if (score > 40) {
+    console.log('soso!');
+  } else {
+    console.log('ng!');
+  }
 </script>
 <div id="container">
   <header>
