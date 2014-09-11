@@ -11,24 +11,27 @@
 <script>
   /*
     組み込みオブジェクト： あらかじめjsが用意しているオブジェクト
-      - Array: 配列
-        - unshift: 要素を先頭に追加
-        - push: 要素を末尾に追加
-        - shift: 要素の先頭から除去
-        - pop: 要素の末尾から除去
-        - splice: 第一引数から追加/削除したい要素を指定
+      - Math: 数学
+        - ceil: 実数を渡すと切り上げる
+        - floor: 実数を渡すと切り捨てる
+        - round: 実数を渡すと四捨五入
+        - random: ランダムで抽出
+      - Date: 日付
+        - getFullYear: 年を取得
+        - getMonth: 月を取得
+        - getTime: 1970/1/1からの経過時間を取得
   */
-  var a = new Array(100, 200, 300);
-  console.log(a.length); // length: 配列時は要素の個数を返す
-  a.push(500);
-  console.log(a);
-  // a.splice(1, 2);
-  a.splice(1, 2, 800, 1000); // 1,2番目を削除して変わりに800,1000を入れる
-  console.log(a);
+  console.log(Math.PI);
+  console.log(Math.ceil(5.3));
+  console.log(Math.floor(5.3));
+  console.log(Math.round(5.3));
+  console.log(Math.random());
 
-  var aa = [100,200,300]; // 文字列リテラル: jsの方で文字列オブジェクトを使いたいんだなと判別してくれる
-  console.log(aa.length);
-
+  var d = new Date();
+  var d = new Date(2014, 1, 11, 10, 20, 30); // jsは0から始まるので要注意
+  console.log(d.getFullYear());
+  console.log(d.getMonth());
+  console.log(d.getTime());
 </script>
 <div id="container">
   <header>
