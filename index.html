@@ -55,19 +55,17 @@
       </section>
       <section>
         <p id="msg">こんいちは！</p>
+        <button id="add">Click!</button>
       </section>
     </article>
   </main>
 </div>
 <script>
-  var e = document.getElementById('msg');
-  e.textContent = 'hello!'; // textを書き換える
-  e.style.color = 'red';
-  e.className = 'myStyle';
-
+document.getElementById('add').addEventListener('click', function() {
   var greet = document.createElement('p');
       text = document.createTextNode('hello world');
-  document.body.appendChild(greet).appendChild(text);
-  </script>
+  document.body.appendChild(greet).appendChild(text);  
+})
+</script>
 </body>
 </html>
