@@ -22,4 +22,10 @@ function photoGallery() {
     links:    $("entry-links")
   };
 
+  entry.morelink.innerHTML = "&raquo; More"; // パーマリンク用のテキストを挿入
+  entry.links.style.display = "none"; // entry.linksを非表示に
+  var permalinks = entry.links.getElementsByTagName('a');
+  var zoomlinks = $("thumbs").getElementsByTagName('a');
+
+
 }
