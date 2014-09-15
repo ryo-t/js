@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>サムネイルとボタンで切り替えるフォトログ風ギャラリー｜js練習</title>
+  <link rel="stylesheet" href="/assets/css/common.css">
+  <link rel="stylesheet" href="./css/01.css">
+  <script src="./js/01.js"></script>
+</head>
+<body>
+<div id="container">
+  <header>
+    <div><h1>サムネイルとボタンで切り替えるフォトログ風ギャラリー</h1></div>
+    <nav>
+      <ul>
+        <li><a href="./current/dotinstall/index.html">ドットインストール</a></li>
+        <li><a href="./current/books/index.html">書籍</a></li>
+        <li></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article id="main">
+      <section id="demo">
+        <div id="container">
+          <a href="#" id="pic-prev">Prev</a>
+          <a href="#" id="pic-next">Next</a>
+          <div id="entry">
+            <h2 id="entry-tit"></h2>
+            <p id="entry-date"></p>
+            <p id="entry-pct"></p>
+            <p id="more"><a href="#" id="morelink"></a></p>
+          </div>
+        </div>
+        <div id="thumb-container">
+          <ul id="thumbs">
+            <li><a href="img/pct_01.jpg"><img src="img/pct_01.jpg" height="60" width="80" alt=""></a></li>
+            <li><a href="img/pct_02.jpg"><img src="img/pct_02.jpg" height="60" width="80" alt=""></a></li>
+            <li><a href="img/pct_03.jpg"><img src="img/pct_03.jpg" height="60" width="80" alt=""></a></li>
+          </ul>
+          <ul id="entry-links">
+            <li><a href="#">エントリー1</a></li>
+            <li><a href="#">エントリー2</a></li>
+            <li><a href="#">エントリー3</a></li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+</div>
+<script>
+document.getElementById('add').addEventListener('click', function() {
+  var greet = document.createElement('p');
+      text = document.createTextNode('hello world');
+  document.body.appendChild(greet).appendChild(text);  
+})
+</script>
+</body>
+</html>
