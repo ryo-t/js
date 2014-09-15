@@ -12,4 +12,14 @@ function photoGallery() {
     classOn: "on"
   };
 
+  // オブジェクトリテラル形式でオブジェクトを保存しておく
+  var entry = {
+    date:     $("entry-date"),
+    title:    $("entry-tit"),
+    pct:      $("entry-pct"),
+    img:      new Image(),
+    morelink: $("morelink"),
+    links:    $("entry-links")
+  };
+
 }
