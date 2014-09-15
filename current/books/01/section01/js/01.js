@@ -39,5 +39,16 @@ function photoGallery() {
     entry.title.innerHTML = permalinks[crIndex].innerHTML;
     entry.pct.appendChild(entry.img);
     entry.morelink.href = permalinks[crIndex].href;
+
+    // index番号に合わせてwrapのクラス名を変更
+    if (permalinks.length == 1) {
+      wrap.className = c.classR + "" + c.classL;
+    } else if (crIndex == permalinks.length - 1) {
+      wrap.className = c.classR;
+    } else if (crIndex == 0) {
+      wrap.className = c.classL;
+    } else {
+      wrap.className = "";
+    };
   };
 }
