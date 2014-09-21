@@ -41,14 +41,34 @@ function photoGallery() {
     entry.morelink.href = permalinks[crIndex].href;
 
     // index番号に合わせてwrapのクラス名を変更
-    if (permalinks.length == 1) {
-      wrap.className = c.classR + "" + c.classL;
-    } else if (crIndex == permalinks.length - 1) {
-      wrap.className = c.classR;
-    } else if (crIndex == 0) {
-      wrap.className = c.classL;
-    } else {
-      wrap.className = "";
-    };
+    if (permalinks.length == 1) wrap.className = c.classR + "" + c.classL;
+    else if (crIndex == permalinks.length - 1) wrap.className = c.classR;
+    else if (crIndex == 0) wrap.className = c.classL;
+    else wrap.className = "";
+
+    for (var i = 0, l = permalinks.length; i < l; i++) {
+      if (i == crIndex) {
+        zoomlinks[crIndex].className = c.classOn;
+      } else {
+        zoomlinks[i].className = '';
+      }
+    }
+  }
+
+  var preloads = [];
+  for (var i = 0, l = permalinks.length; i < l; i++) {
+    // プリロード処理
+    preloads[i] = new Image();
+    preloads[i].src = zoomlinks[i].href;
+
+    // この後zoomlinks[i]のonclickイベントの処理にインデックス番号を渡すため
+    zoomlinks[i].index = i;
+
+    // サムネイルリンクをクリックした時の処理
+    zoomlinks[i].onclick = function() {
+      crIndex = this.index;
+      changeEntry();
+      return false;
+    }
   };
 }
