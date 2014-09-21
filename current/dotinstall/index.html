@@ -4,24 +4,35 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>js練習</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/test.js"></script>
+  <link rel="stylesheet" href="">
+  <script src="test.js"></script>
+  <style>
+    .myStyle {
+      font-weight: bold;
+      border: 1px solid gray;
+    }
+  </style>
 </head>
 <body>
+<script>
+  /*
+    - DOM
+  */
+</script>
 <div id="container">
   <header>
     <div><h1>jsの勉強まとめ</h1></div>
     <nav>
       <ul>
-        <li><a href="current/dotinstall/index.html">ドットインストール</a></li>
-        <li><a href="current/books/index.html">書籍</a></li>
+        <li>ドットインストール</li>
+        <li></li>
         <li></li>
       </ul>
     </nav>
   </header>
   <main>
-    <article id="main">
-      <section id="summary">
+    <article id="dotinstall">
+      <section id="01">
         <h2>JavaScriptとはなにか？</h2>
         <h3>概要</h3>
         <ul>
@@ -42,15 +53,9 @@
           <li>テキストエディタ</li>
         </ul>
       </section>
-      <section id="contents">
-        <div id="dotinstall">ドットインストール</div>
-        <div id="books">
-          <ul>書籍
-            <li><a href="current/books/01/isbn978-4-8443-6059-9.html">JavaScript&amp;Ajax プロが教える"本当の使い方"</a></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
+      <section>
+        <p id="msg">こんいちは！</p>
+        <button id="add">Click!</button>
       </section>
     </article>
   </main>
