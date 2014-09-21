@@ -71,4 +71,18 @@ function photoGallery() {
       return false;
     }
   };
+
+  $('#pic-prev').onclick = function() {
+    if (crIndex == 0) return false;
+    crIndex --;
+    changeEntry();
+    return false;
+  };
+  &('#pic-next').onclick = function() {
+    if (crIndex == permalinks.length -1) return false;
+    crIndex ++;
+    changeEntry();
+    return false;
+  };
+  changeEntry(); // エントリー表示初期化
 }
