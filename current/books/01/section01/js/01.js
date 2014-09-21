@@ -72,13 +72,13 @@ function photoGallery() {
     }
   };
 
-  $('#pic-prev').onclick = function() {
+  $('pic-prev').onclick = function() {
     if (crIndex == 0) return false;
     crIndex --;
     changeEntry();
     return false;
   };
-  &('#pic-next').onclick = function() {
+  $('pic-next').onclick = function() {
     if (crIndex == permalinks.length -1) return false;
     crIndex ++;
     changeEntry();
@@ -86,3 +86,7 @@ function photoGallery() {
   };
   changeEntry(); // エントリー表示初期化
 }
+
+
+if (window.addEventListener) window.addEventListener('load', photoGallery, false);
+else if (window.attachEvent) window.attachEvent('onload', photoGallery);
